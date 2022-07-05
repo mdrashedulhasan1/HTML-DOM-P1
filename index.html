@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="friend">
+        <li>Blog-01</li>
+        <li>Blog-02</li>
+        <li>Blog-03</li>
+        <li>Blog-04</li>
+        <li>Blog-05</li>
+    </ul>
+    <div class="container">
+        <div class="article">
+            <h1>Blog-01</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, praesentium.</p>
+        </div>
+        <div class="article">
+            <h1 id="blog">Blog-02</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, praesentium.</p>
+        </div>
+        <div class="article">
+            <h1>Blog-03</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, praesentium.</p>
+        </div>
+    </div>
+    <script>
+        const li = document.createElement('li');
+        li.innerText = 'Blog-06';
+        const friend = document.getElementById('friend');
+        friend.appendChild(li);
+        const selectRemoveFriend = friend.children[3];
+        friend.removeChild(selectRemoveFriend);
+
+        const articles = document.getElementsByClassName('article');
+        for(const article of articles){
+            article.style.backgroundColor = 'green';
+            article.style.padding = '5px 10px';
+            article.style.margin = '2px 5px';
+        }
+
+        const blog = document.getElementById('blog');
+        blog.style.color = 'gold';
+        blog.style.fontWeight = '300';
+        blog.style.textTransform = 'uppercase';
+    </script>
+</body>
+</html>
